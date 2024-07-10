@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /source
 
 # Copy the .csproj and .sln files to restore dependencies
-COPY . .
+COPY src/Application/Application.csproj .
 
 # Restore the dependencies
 RUN dotnet restore
